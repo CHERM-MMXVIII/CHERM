@@ -1,31 +1,21 @@
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
-
 const app = express();
-const PORT = 3000;
 
 // Serve static files
 app.use('/css', express.static(path.join(__dirname, 'css')));
-app.use('/js', express.static(path.join(__dirname, 'js')));
 app.use('/img', express.static(path.join(__dirname, 'img')));
+app.use('/JS', express.static(path.join(__dirname, 'JS')));
+app.use('/html', express.static(path.join(__dirname, 'html')));
 
-// Automatically serve HTML files
-const htmlFolder = path.join(__dirname, 'html');
-fs.readdirSync(htmlFolder).forEach(file => {
-  if (file.endsWith('.html')) {
-    const route = file === 'index.html' ? '/' : `/${file.replace('.html', '')}`;
-    app.get(route, (req, res) => {
-      res.sendFile(path.join(htmlFolder, file));
-    });
-  }
+// Route for index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Catch-all 404
-app.get('*', (req, res) => {
-  res.status(404).send('Page not found');
+// Route for services.html
+app.get('/services.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'services.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://192.168.18.103:${PORT}`);
-});
+app.listen(3000, () => console.log('Server running on port 3000'));
