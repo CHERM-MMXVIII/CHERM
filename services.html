@@ -1,0 +1,457 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Meta tags for responsive design and compatibility -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Services</title>
+    <!-- Links to external stylesheets and libraries -->
+    <link rel="icon" type="image/png" href="../img/slsu-cherm-logo.png">
+    <link rel="stylesheet" href="../css/Style.css">
+    <link rel="stylesheet" href="../css/mapstyle.css">
+    <link rel="stylesheet" href="../css/stylesheet2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <!-- Provides navigation links to different pages -->
+    <nav class="navbar navbar-expand-md navbar-light shadow-lg">
+        <div class="d-flex navbar-content justify-content-between">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/slsu-cherm-logo.png" class="logo-pic" alt="Logo of SLSU CHERM">
+                <h3 class="logo-name">SLSU <br /> CHERM</h3>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#navModal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav text-white">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="../index.html#what-is-cherm" id="navbarDropdown">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Custom Dropdown Menu -->
+    <!-- Displays additional links when hovering over "About Us" -->
+    <div class="custom-dropdown-menu" id="customDropdown">
+        <div class="dropdown-menu-container">
+            <div class="slsu-cherm-partnership">
+                <div class="slsu">
+                    <img src="../img/slsu-logo.png" class="slsu">
+                </div>
+                <div class="dost-calabarzon">
+                    <img src="../img/dost-logo.png" class="dost">
+                </div>
+                <div class="slsu-office-of-research-services">
+                    <img src="../img/slsu-research-logo.png" class="ors">
+                </div>
+            </div>
+            <div class="dropdown-link-container">
+                <div class="dropdown-link">
+                    <a class="dropdown-item" href="objectives.html">Objectives</a>
+                    <a class="dropdown-item" href="achievement.html">Achievements</a>
+                    <a class="dropdown-item" href="events.html">Events and Updates</a>
+                    <a class="dropdown-item" href="org.html">People behind CHERM</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Section -->
+    <!-- Contains modals for navigation links in mobile view -->
+    <div class="modal fade" id="navModal" tabindex="-1" aria-labelledby="navModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div data-bs-theme="dark">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                        <li><a class="nav-link" href="objectives.html">Objectives</a></li>
+                        </li>
+                        <li class="nav-item">
+                        <li><a class="nav-link" href="achievement.html">Achievements</a></li>
+                        </li>
+                        <li class="nav-item">
+                        <li><a class="nav-link" href="events.html">Events and Updates</a></li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact-us">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="org.html">People Behind CHERM</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SVG Map Section -->
+    <!-- Displays an interactive map of Quezon -->
+    <div class="quezon-map-container-services">
+        <object id="quezon-map" type="image/svg+xml" data="../img/quezon_interactive_map.svg"></object>
+        <div class="map-tooltip" id="mapTooltip"></div>
+    </div>
+
+    <!-- Services Section -->
+    <!-- Lists the services provided by CHERM -->
+    <section id="services">
+        <h2 class="title" data-aos="fade-right" data-aos-duration="2000">SERVICES</h2>
+        <div id="service" data-aos="fade-up" data-aos-duration="2000">
+            <div class="list-services">
+                <div class="icon-service">
+                    <img src="../img/services1-icon.png" alt="Icon">
+                </div>
+                <div class="services-con">
+                    <h2>GEOMAPPING SERVICES</h2>
+                    <p>Provision for evidence-based natural resource mapping made or acquired during
+                        activities of the center both in custom-printed and downloadable forms.</p>
+                    <div class="inquiry-btn">
+                        <p>Guidelines for a Request.</p>
+                        <button type="button" class="btn-open-modal" onclick="openModal1()">Click Here</button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="list-services">
+                <div class="icon-service">
+                    <img src="../img/services2-icon.png" alt="Icon">
+                </div>
+                <div class="services-con">
+                    <h2>GEOSPATIAL CAPABILITY ENHANCEMENT CENTER</h2>
+                    <p>A one-stop-shop where Common Operational Datasets (COD) for LGU's
+                        and the general public for data driven training, planning, and
+                        implementation whether for hazards, environmental mapping and other
+                        service requirements.</p>
+                    <div class="inquiry-btn">
+                        <p>Guidelines for a Request.</p>
+                        <button type="button" class="btn-open-modal" onclick="openModal2()">Click Here</button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="list-services">
+                <div class="icon-service">
+                    <img src="../img/services3-icon.png" alt="Icon">
+                </div>
+                <div class="services-con">
+                    <h2>TECHNOLOGY DRIVEN RESEARCH AND DEVELOPMENT PROVIDER</h2>
+                    <p>The center will be the hub for research and development activities
+                        anchored in geospatial technology focused on new-real-time data
+                        acquisition, remote sensing, and artificial intelligence
+                        projects for cooperating agencies in the Region.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal 1 -->
+    <!-- GIS Mapping Requisition guidelines for internal and external clients -->
+    <div class="modal" id="serviceModal1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modalheader">
+                    <h3 class="modal-title">GIS MAPPING REQUISITION</h3>
+                    <button type="button" class="close-btn" onclick="closeModal1()" aria-label="Close">&times;</button>
+                </div>
+                <span class="separator"></span>
+                <div class="modalbody">
+                    <p class="client-type"><strong>INTERNAL CLIENT</strong></p>
+                    <p>Guidelines for Submitting a Request for Mapping.</p>
+                    <div class="modal-details">
+                        <div class="qrcode">
+                            <p><strong>Scan Here:</strong></p>
+                            <img src="../img/qr-int-mapping.png" alt="QR Code">
+                            <p><strong>Form Link:</strong></p>
+                            <a href="https://tinyurl.com/CHERMGMInt">
+                                <p>https://tinyurl.com/CHERMGMInt</p>
+                            </a>
+                        </div>
+                        <div class="guidelines">
+                            <p><strong>Address your Request to:</strong></p>
+                            <p>Dr. Nicanor L. Guinto <br /> <i>Director, Research Services</i></p>
+                            <p><strong>Thru:</strong></p>
+                            <p>Mr. Anthony L. Empamano <br /> <i>Center Chief, CHERM</i></p>
+                            <p><strong>File Name Format:</strong></p>
+                            <p>Name your file using this format: <br /><i> GISMR_OFFICEorCOLLEGE_YourInitials.pdf </i>
+                            </p>
+                            <p><strong>Example:</strong></p>
+                            <p> GISMR_CHERM_JDC.pdf </p>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="line-modal"></span>
+
+                <div class="modalbody">
+                    <p class="client-type"><strong>EXTERNAL CLIENT</strong></p>
+                    <p>Guidelines for Submitting a Request for Mapping.</p>
+                    <div class="modal-details">
+                        <div class="qrcode">
+                            <p><strong>Scan Here:</strong></p>
+                            <img src="../img/qr-ext-mapping.png" alt="QR Code">
+                            <p><strong>Form Link:</strong></p>
+                            <a href="https://tinyurl.com/CHERMGMExt">
+                                <p>https://tinyurl.com/CHERMGMExt</p>
+                            </a>
+                        </div>
+                        <div class="guidelines">
+                            <p><strong>Address your Request to:</strong></p>
+                            <p>Dr. Frederick T. Villa <br /> <i>University President</i></p>
+                            <p><strong>Thru:</strong></p>
+                            <p>Dr. Nicanor L. Guinto <br /> <i>Director, Research Services</i></p>
+                            <p>Mr. Anthony L. Empamano <br /> <i>Center Chief, CHERM</i></p>
+                            <p><strong>File Name Format:</strong></p>
+                            <p>Name your file using this format: <br /><i> GISMR_AGENCY/OFFICE_YourInitials.pdf </i></p>
+                            <p><strong>Example:</strong></p>
+                            <p> GISMR_QZNPRV_JDC.pdf </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-close-modal" onclick="closeModal1()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <!-- GIS Training Requisition guidelines for internal and external clients -->
+    <div class="modal" id="serviceModal2" tabindex="-2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modalheader">
+                    <h3 class="modal-title">GIS TRAINING REQUISITION</h3>
+                    <button type="button" class="close-btn" onclick="closeModal2()" aria-label="Close">&times;</button>
+                </div>
+                <span class="separator"></span>
+                <div class="modalbody">
+                    <p class="client-type"><strong>INTERNAL CLIENT</strong></p>
+                    <p>Guidelines for Submitting a Request for Training.</p>
+                    <div class="modal-details">
+                        <div class="qrcode">
+                            <p><strong>Scan Here:</strong></p>
+                            <img src="../img/qr-int-training.png" alt="QR Code">
+                            <p><strong>Form Link:</strong></p>
+                            <a href="https://tinyurl.com/CHERMGTInt">
+                                <p>https://tinyurl.com/CHERMGTInt</p>
+                            </a>
+                        </div>
+                        <div class="guidelines">
+                            <p><strong>Address your Request to:</strong></p>
+                            <p>Dr. Nicanor L. Guinto <br /> <i>Director, Research Services</i></p>
+                            <p><strong>Thru:</strong></p>
+                            <p>Mr. Anthony L. Empamano <br /> <i>Center Chief, CHERM</i></p>
+                            <p><strong>File Name Format:</strong></p>
+                            <p>Name your file using this format: <br /><i> GISTR_OFFICEorCOLLEGE_YourInitials.pdf </i>
+                            </p>
+                            <p><strong>Example:</strong></p>
+                            <p> GISTR_CHERM_JDC.pdf </p>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="line-modal"></span>
+
+                <div class="modalbody">
+                    <p class="client-type"><strong>EXTERNAL CLIENT</strong></p>
+                    <p>Guidelines for Submitting a Request for Training.</p>
+                    <div class="modal-details">
+                        <div class="qrcode">
+                            <p><strong>Scan Here:</strong></p>
+                            <img src="../img/qr-ext-training.png" alt="QR Code">
+                            <p><strong>Form Link:</strong></p>
+                            <a href="https://tinyurl.com/CHERMGTExt">
+                                <p>https://tinyurl.com/CHERMGTExt</p>
+                            </a>
+                        </div>
+                        <div class="guidelines">
+                            <p><strong>Address your Request to:</strong></p>
+                            <p>Dr. Frederick T. Villa <br /> <i>University President</i></p>
+                            <p><strong>Thru:</strong></p>
+                            <p>Dr. Nicanor L. Guinto <br /> <i>Director, Research Services</i></p>
+                            <p>Mr. Anthony L. Empamano <br /> <i>Center Chief, CHERM</i></p>
+                            <p><strong>File Name Format:</strong></p>
+                            <p>Name your file using this format: <br /><i> GISTR_AGENCY/OFFICE_YourInitials.pdf </i></p>
+                            <p><strong>Example:</strong></p>
+                            <p> GISTR_QZNPRV_JDC.pdf </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-close-modal" onclick="closeModal2()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Footer Section -->
+    <!-- Contains contact information, address, and additional links -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="bagong-pilipinas">
+                <a href="https://www.bagongpilipinastayo.com/" target="_blank">
+                    <img src="../img/Hi-Res-BAGONG-PILIPINAS-LOGO-1474x1536.png" class="bagong-pilipinas-logo">
+                </a>
+            </div>
+            <div class="footer-col">
+                <div class="cherm">
+                    <img src="../img/slsu-cherm-logo.png" class="cherm-logo">
+                    <p class="text-center" style="font-size: 20px;">Southern Luzon State University</p>
+                    <p class="text-center" style="font-size: 30px;">Center for Hazard and <br>Environmental Resource
+                        Mapping<br>(CHERM)</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <div class="p-5 contact-us" id="contact-us">
+                    <p>Contact Us:</p>
+                    <div class="facebook">
+                        <a href="https://www.facebook.com/SLSU.CHERM" target="_blank"
+                            class="d-flex align-items-center text-decoration-none">
+                            <img src="../img/facebook.png" class="icon">
+                            <p class="mb-0">SLSU Center for Hazard and Environmental Resource Mapping(CHERM)</p>
+                        </a>
+                    </div>
+
+                    <div class="gmail">
+                        <a href="mailto:cherm4a@slsu.edu.ph" class="d-flex align-items-center text-decoration-none">
+                            <img src="../img/gmail.png" class="icon">
+                            <p class="mb-0">cherm4a@slsu.edu.ph</p>
+                        </a>
+                    </div>
+                    <div class="address">
+                        <p style="text-transform: uppercase;">Address:</p>
+                        <p>2F DOST-PSTC Quezon, SLSU Lucena Campus, Ibabang Dupay</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <div class="map">
+                    <iframe class="map-frame"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.1698134828434!2d121.62914570000001!3d13.9484925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd4b5adf90d2e9%3A0xfdc797625c9f5ab1!2sDepartment%20of%20Science%20and%20Technology%20(DOST)%20-%20Quezon%20S%20and%20T%20Center!5e0!3m2!1sen!2sph!4v1742370723029!5m2!1sen!2sph"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div style="width: 100%; background: #034955; color: #fdfdfd; text-align: center; padding: 8px 0 8px 0; font-size: 16px;">
+        &copy; 2025 SLSU - CHERM. All rights reserved. 
+    </div>
+
+    <!-- Scripts Section -->
+    <!-- Includes external libraries and custom scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js (necessary for Bootstrap's dropdowns) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        function goToAboutUs() {
+            window.location.href = "../index.html#what-is-cherm";
+            sessionStorage.setItem("scrollToWhatIsCherm", "true"); // Store flag in sessionStorage
+        }
+
+        function openModal1() {
+            document.getElementById('serviceModal1').style.display = 'block';
+        }
+
+        function closeModal1() {
+            document.getElementById('serviceModal1').style.display = 'none';
+        }
+
+        function openModal2() {
+            document.getElementById('serviceModal2').style.display = 'block';
+        }
+
+        function closeModal2() {
+            document.getElementById('serviceModal2').style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            const modal1 = document.getElementById('serviceModal1');
+            const modal2 = document.getElementById('serviceModal2');
+
+            if (event.target === modal1) {
+                modal1.style.display = 'none';
+            }
+
+            if (event.target === modal2) {
+                modal2.style.display = 'none';
+            }
+        };
+
+        const aboutUs = document.getElementById('navbarDropdown');
+        const dropdown = document.getElementById('customDropdown');
+
+        if (aboutUs && dropdown) {
+            aboutUs.addEventListener('mouseenter', () => {
+                dropdown.style.display = 'block';
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                dropdown.style.display = 'none';
+            });
+
+            dropdown.addEventListener('mouseenter', () => {
+                dropdown.style.display = 'block';
+            });
+
+            aboutUs.addEventListener('mouseleave', () => {
+                setTimeout(() => {
+                    if (!dropdown.matches(':hover')) {
+                        dropdown.style.display = 'none';
+                    }
+                }, 200);
+            });
+        }
+    </script>
+</body>
+
+</html>
